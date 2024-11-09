@@ -2,6 +2,8 @@
 all: install compile run
 
 install-dep:;
+	sudo apt-get update
+	sudo apt-get upgrade
 	sudo apt-get install cmake default-jre python3-pip imx500-all imx500-tools
 	pip3 install opencv-python-headless --break-system-packages
 	pip3 install torch --break-system-packages
