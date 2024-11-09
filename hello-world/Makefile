@@ -1,5 +1,5 @@
 
-all: install compile run
+all: install-dep compile run
 
 install-dep:;
 	sudo apt-get update
