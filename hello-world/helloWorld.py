@@ -12,17 +12,18 @@ class NeuralNetwork(nn.Module):
     ## and runs it through the "neural network". It returns a tensor which is returned to RPi in metadata.
     def forward(self, input): 
         # It seems that I can not simply return constant "hello world" tensor, I have to 'compute' it from the input
-        # otherwise mct issues an error.
+        # otherwise mct issues an error. So:
+        
         # reduce the size of input to 1D tensor
         oo = input[:, -1, -1]
         # substract it from itself, hence getting a zero tensor
         oo = torch.sub(oo, oo)
         # prepare another tensor containing the "Hello world" message
         zz = torch.zeros([224])
-        text = list("Hello world from IMX500 vv3".encode('ascii'))
+        text = list("Hello world from IMX500".encode('ascii'))
         zz[0:len(text)] = torch.tensor(text)
-        # add the tensor containig "Hello world" message to zeroed input
+        # add the tensor containing "Hello world" message to zeroed input
         oo = torch.add(oo, zz);
-        # I am returning 1D tensor heer, in general it can be 2D or 3D, I think.
+        # return the 1D tensor. In general I can return 2D or 3D tensor as well.
         return oo
 

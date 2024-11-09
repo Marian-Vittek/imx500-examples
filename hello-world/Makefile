@@ -1,10 +1,8 @@
 
 all: install compile run
 
-install:;
-	sudo apt-get install cmake default-jre
-	sudo apt-get install imx500-all imx500-tools
-	sudo apt-get install python3-pip
+install-dep:;
+	sudo apt-get install cmake default-jre python3-pip imx500-all imx500-tools
 	pip3 install opencv-python-headless --break-system-packages
 	pip3 install torch --break-system-packages
 	pip3 install torchvision --break-system-packages
@@ -12,6 +10,9 @@ install:;
 	pip3 install datasets --break-system-packages
 	pip3 install safetensors --break-system-packages
 	pip3 install imx500-converter[pt] --break-system-packages
+	pip3 install model_compression_toolkit --break-system-packages
+	pip3 uninstall opencv-python opencv-contrib-python opencv-python-headless --break-system-packages
+	pip3 install opencv-python-headless --break-system-packages
 
 compile: clean
 	python3 compile-to-onnx.py
