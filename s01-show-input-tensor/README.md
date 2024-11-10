@@ -9,11 +9,11 @@ If you are on a fresh new installation of Raspbian OS, you may want to start by 
   export PATH=$PATH:~/.local/bin
   make install-dep
 ```
-to compile hello-world package loadable to Raspberry Pi AI camera, type:
+to compile this example into a package loadable to Raspberry Pi AI camera, type:
 ```
   make compile
 ```
-to execute hello-world on AI camera type:
+to execute the example on AI camera type:
 ```
   make run
 ```
