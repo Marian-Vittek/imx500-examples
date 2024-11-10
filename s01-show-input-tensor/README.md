@@ -1,6 +1,6 @@
 # show tensor
 
-Deafault size of the tensor entering IMX500 "neural network" is 224x224 pixels. This example
+The default size of the tensor entering IMX500 "neural network" is 224x224 pixels. This example
 copies the input tensor into left upper corner of the displayed camera stream. It is no surprise that
 it is the same image as coming from camera.
 
