@@ -14,3 +14,5 @@ to execute hello-world on AI camera type:
 ```
   make run
 ```
+
+Expected result is like: ![expected result](result.png)
