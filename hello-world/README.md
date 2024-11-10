@@ -6,7 +6,7 @@ to start by installing all necessary packages with:
   export PATH=$PATH:~/.local/bin
   make install-dep
 ```
-to compile a package executable inside Raspberry Pi AI camera, type:
+to compile hello-world package loadable to Raspberry Pi AI camera, type:
 ```
   make compile
 ```

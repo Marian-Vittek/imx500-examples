@@ -21,7 +21,7 @@ compile: clean
 	imxconv-pt -i model.onnx -o modelbin
 	imx500-package -i modelbin/packerOut.zip -o modelpack
 
-run::
+run:;
 	python3 imx500_run_hello_world.py
 
 clean:;
