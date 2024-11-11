@@ -6,3 +6,4 @@ This directory contains my experiments with programming a Raspberry Pi AI camera
 
 At least for the time being, I am not focused on AI and neural networks, but rather I use the camera as a visual processing unit with built-in convolution and matrix operations. I am also not a Python developer, but it seems that Python and neural networks are the easiest way to get into programming the camera. That is why the examples are written in Python.
 
+Since I do not really understand neural networks and Python, my solutions may be far from good. I'd be glad if someone with a deeper understanding would contact me with suggestions on how to do it the right way.
