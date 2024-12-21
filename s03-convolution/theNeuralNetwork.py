@@ -23,7 +23,7 @@ class NeuralNetwork(nn.Module):
             [-1.,-1.,-1.,-1.,-1.],
             [-2.,-2.,-2.,-2.,-2.],
         ]]])
-        # translate grayscale tensor to the format expected be conv2d
+        # translate grayscale tensor to the format expected by conv2d
         bw = bw[:, None, :, :]
         # apply convolution
         convoluted = F.conv2d(bw, weights, stride=1, padding=2)
