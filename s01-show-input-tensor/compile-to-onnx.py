@@ -27,8 +27,7 @@ def representative_dataset_gen2():
 
 # Set IMX500 TPC
 tpc = mct.get_target_platform_capabilities(fw_name="pytorch",
-                                           target_platform_name='imx500',
-                                           target_platform_version='v3')
+                                           target_platform_name='imx500')
 
 # Perform post training quantization
 quant_model, _ = mct.ptq.pytorch_post_training_quantization(in_module=model,
